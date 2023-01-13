@@ -1,7 +1,7 @@
 package com.example.puzzleapp.domain
 
 import com.example.puzzleapp.database.DatabasePuzzle
-import java.util.*
+import java.util.Objects
 
 class Puzzle(
     var puzzleId: Long = 0L,
