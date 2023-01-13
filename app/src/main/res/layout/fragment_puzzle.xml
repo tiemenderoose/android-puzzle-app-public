@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="puzzleViewModel"
+            type="com.example.puzzleapp.screens.puzzle.PuzzleViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableLayout
+            android:id="@+id/table_puzzle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    style="@style/Image"
+                    android:contentDescription="@string/cd_puzzle_piece"
+                    app:imageBitmap="@{puzzleViewModel.imageList[0]}" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    style="@style/Image"
+                    android:contentDescription="@string/cd_puzzle_piece"
+                    app:imageBitmap="@{puzzleViewModel.imageList[1]}" />
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    style="@style/Image"
+                    android:contentDescription="@string/cd_puzzle_piece"
+                    app:imageBitmap="@{puzzleViewModel.imageList[2]}" />
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    style="@style/Image"
+                    android:contentDescription="@string/cd_puzzle_piece"
+                    app:imageBitmap="@{puzzleViewModel.imageList[3]}" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    style="@style/Image"
+                    android:contentDescription="@string/cd_puzzle_piece"
+                    app:imageBitmap="@{puzzleViewModel.imageList[4]}" />
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    style="@style/Image"
+                    android:contentDescription="@string/cd_puzzle_piece"
+                    app:imageBitmap="@{puzzleViewModel.imageList[5]}" />
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    style="@style/Image"
+                    android:contentDescription="@string/cd_puzzle_piece"
+                    app:imageBitmap="@{puzzleViewModel.imageList[6]}" />
+
+                <ImageView
+                    android:id="@+id/imageView8"
+                    style="@style/Image"
+                    android:contentDescription="@string/cd_puzzle_piece"
+                    app:imageBitmap="@{puzzleViewModel.imageList[7]}" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/imageView9"
+                    style="@style/Image"
+                    android:contentDescription="@string/cd_puzzle_piece"
+                    app:imageBitmap="@{puzzleViewModel.imageList[8]}" />
+
+                <ImageView
+                    android:id="@+id/imageView10"
+                    style="@style/Image"
+                    android:contentDescription="@string/cd_puzzle_piece"
+                    app:imageBitmap="@{puzzleViewModel.imageList[9]}" />
+
+                <ImageView
+                    android:id="@+id/imageView11"
+                    style="@style/Image"
+                    android:contentDescription="@string/cd_puzzle_piece"
+                    app:imageBitmap="@{puzzleViewModel.imageList[10]}" />
+
+                <ImageView
+                    android:id="@+id/imageView12"
+                    style="@style/Image"
+                    android:contentDescription="@string/cd_puzzle_piece"
+                    app:imageBitmap="@{puzzleViewModel.imageList[11]}" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/imageView13"
+                    style="@style/Image"
+                    android:contentDescription="@string/cd_puzzle_piece"
+                    app:imageBitmap="@{puzzleViewModel.imageList[12]}" />
+
+                <ImageView
+                    android:id="@+id/imageView14"
+                    style="@style/Image"
+                    android:contentDescription="@string/cd_puzzle_piece"
+                    app:imageBitmap="@{puzzleViewModel.imageList[13]}" />
+
+                <ImageView
+                    android:id="@+id/imageView15"
+                    style="@style/Image"
+                    android:contentDescription="@string/cd_puzzle_piece"
+                    app:imageBitmap="@{puzzleViewModel.imageList[14]}" />
+
+                <ImageView
+                    android:id="@+id/imageView16"
+                    style="@style/Image"
+                    android:contentDescription="@string/cd_puzzle_piece"
+                    app:imageBitmap="@{puzzleViewModel.imageList[15]}" />
+            </TableRow>
+
+        </TableLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

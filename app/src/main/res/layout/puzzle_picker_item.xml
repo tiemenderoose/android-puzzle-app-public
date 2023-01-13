@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="puzzle"
+            type="com.example.puzzleapp.domain.Puzzle" />
+
+        <variable
+            name="clickListener"
+            type="com.example.puzzleapp.screens.puzzlePicker.PuzzleListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="@{()->clickListener.onClick(puzzle)}">
+
+        <ImageView
+            android:id="@+id/picker_item_imageView"
+            android:layout_width="@dimen/puzzle_picker_image_size"
+            android:layout_height="@dimen/puzzle_picker_image_size"
+            android:layout_marginHorizontal="@dimen/puzzle_picker_item_margin"
+            android:layout_marginBottom="@dimen/puzzle_picker_item_margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:puzzle="@{puzzle}"
+            tools:src="@tools:sample/avatars" />
+
+        <ImageView
+            android:id="@+id/picker_item_checkmark"
+            android:layout_width="@dimen/puzzle_picker_checkmark_size"
+            android:layout_height="@dimen/puzzle_picker_checkmark_size"
+            android:alpha="0.8"
+            app:layout_constraintBottom_toBottomOf="@+id/picker_item_imageView"
+            app:layout_constraintEnd_toEndOf="@+id/picker_item_imageView"
+            app:layout_constraintStart_toStartOf="@+id/picker_item_imageView"
+            app:layout_constraintTop_toTopOf="@+id/picker_item_imageView"
+            app:srcCompat="@drawable/ic_checkmark_circle"
+            tools:src="@drawable/ic_checkmark_circle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

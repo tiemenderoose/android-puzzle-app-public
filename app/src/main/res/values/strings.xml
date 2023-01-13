@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">PuzzleApp</string>
+    <string name="new_puzzle">Start a new puzzle</string>
+
+    <string name="request_failed">Failed to add a new puzzle</string>
+    <string name="request_retry">Retry</string>
+
+    <string name="clear_unfinished_confirmation">Delete all unfinished puzzles?</string>
+    <string name="clear_history_confirmation">Clear History?</string>
+    <string name="clear_confirm">Confirm</string>
+
+    <string name="fragment_home">Home</string>
+    <string name="fragment_puzzle_picker">New Puzzle</string>
+    <string name="fragment_puzzle">Puzzle</string>
+    <string name="fragment_puzzle_complete">Puzzle Complete</string>
+    <string name="fragment_history">History</string>
+
+    <string name="puzzle_completed">Puzzle Completed!</string>
+    <string name="number_of_moves">Moves used:  </string>
+    <string name="completion_date">Completion date:  </string>
+    <string name="completion_time">Completion time: </string>
+    <string name="by_author">Picture by: </string>
+    <string name="return_to_start">Return</string>
+
+    <string name="cd_puzzle_piece">puzzle piece</string>
+    <string name="cd_puzzle_preview">puzzle preview</string>
+    <string name="cd_add_puzzle">add puzzle</string>
+    <string name="cd_clear_puzzles">clear puzzles</string>
+    <string name="cd_clear_history">clear history</string>
+
+</resources>

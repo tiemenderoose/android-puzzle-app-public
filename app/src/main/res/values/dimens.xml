@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="image_tile_size">@dimen/_71sdp</dimen>
+    <dimen name="image_tile_size_marked">@dimen/_60sdp</dimen>
+    <dimen name="image_tile_margin">@dimen/_1sdp</dimen>
+    <dimen name="image_tile_margin_marked">@dimen/_6sdp</dimen>
+
+    <dimen name="puzzle_picker_image_size">@dimen/_200sdp</dimen>
+    <dimen name="puzzle_picker_item_margin">5dp</dimen>
+    <dimen name="puzzle_picker_checkmark_size">@dimen/_48sdp</dimen>
+
+    <dimen name="puzzle_complete_image_size">@dimen/_250sdp</dimen>
+    <dimen name="puzzle_complete_text_margin">@dimen/_10sdp</dimen>
+    <dimen name="puzzle_complete_between_margin">@dimen/_3sdp</dimen>
+
+    <dimen name="history_item_margin">5dp</dimen>
+    <dimen name="history_item_size">@dimen/_100sdp</dimen>
+    <dimen name="history_text_margin">@dimen/_8sdp</dimen>
+    <dimen name="history_between_margin">@dimen/_3sdp</dimen>
+
+    <dimen name="fab_margin">@dimen/_27sdp</dimen>
+</resources>

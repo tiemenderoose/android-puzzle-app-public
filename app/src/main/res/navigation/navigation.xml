@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation"
+    android:label="New"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.puzzleapp.screens.home.HomeFragment"
+        android:label="@string/fragment_home">
+
+        <action
+            android:id="@+id/action_homeFragment_to_puzzlePickerFragment"
+            app:destination="@id/puzzlePickerFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/puzzlePickerFragment"
+        android:name="com.example.puzzleapp.screens.puzzlePicker.PuzzlePickerFragment"
+        android:label="@string/fragment_puzzle_picker">
+        <action
+            android:id="@+id/action_puzzlePickerFragment_to_puzzleFragment"
+            app:destination="@id/puzzleFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/puzzleFragment"
+        android:name="com.example.puzzleapp.screens.puzzle.PuzzleFragment"
+        android:label="@string/fragment_puzzle">
+
+        <argument
+            android:name="puzzleId"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_puzzleFragment_to_puzzleCompleteFragment"
+            app:destination="@id/puzzleCompleteFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/puzzleCompleteFragment"
+        android:name="com.example.puzzleapp.screens.puzzleComplete.PuzzleCompleteFragment"
+        android:label="@string/fragment_puzzle_complete">
+        <argument
+            android:name="puzzleId"
+            app:argType="long" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.example.puzzleapp.screens.history.HistoryFragment"
+        android:label="@string/fragment_history" />
+
+</navigation>

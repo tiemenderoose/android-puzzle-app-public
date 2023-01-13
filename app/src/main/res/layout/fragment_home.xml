@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".screens.home.HomeFragment">
+
+        <ImageView
+            android:id="@+id/imageView_puzzle_preview"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_200sdp"
+            android:contentDescription="@string/cd_puzzle_preview"
+            app:layout_constraintBottom_toTopOf="@+id/button_start_puzzle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:src="@drawable/sample_bitmap" />
+
+        <Button
+            android:id="@+id/button_start_puzzle"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginTop="16dp"
+            android:text="@string/new_puzzle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView_puzzle_preview" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

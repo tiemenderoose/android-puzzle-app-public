@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Image">
+        <item name="android:layout_width">@dimen/image_tile_size</item>
+        <item name="android:layout_height">@dimen/image_tile_size</item>
+        <item name="android:layout_margin">@dimen/image_tile_margin</item>
+    </style>
+    <style name="MarkedImage">
+        <item name="android:layout_width">@dimen/image_tile_size_marked</item>
+        <item name="android:layout_height">@dimen/image_tile_size_marked</item>
+        <item name="android:layout_margin">@dimen/image_tile_margin_marked</item>
+    </style>
+    <style name="TitleText">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">26sp</item>
+    </style>
+    <style name="HistoryLabel">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+    </style>
+    <style name="HistoryText">
+        <item name="android:textSize">@dimen/_12sdp</item>
+    </style>
+    <style name="FAB">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">end|bottom</item>
+    </style>
+    <style name="FAB.Clear">
+        <item name="android:backgroundTint">@color/red</item>
+        <item name="android:visibility">invisible</item>
+        <item name="android:src">@drawable/ic_baseline_delete_24</item>
+    </style>
+</resources>

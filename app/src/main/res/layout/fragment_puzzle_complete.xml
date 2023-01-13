@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.puzzleapp.screens.puzzleComplete.PuzzleCompleteViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/completed_puzzle_imageView"
+            android:layout_width="@dimen/puzzle_complete_image_size"
+            android:layout_height="@dimen/puzzle_complete_image_size"
+            android:contentDescription="@string/cd_puzzle_preview"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.40"
+            app:puzzle="@{viewModel.puzzle}" />
+
+        <TextView
+            android:id="@+id/finished_textView"
+            style="@style/TitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/puzzle_completed"
+            android:textSize="@dimen/_30sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/author_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/moves_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/puzzle_complete_between_margin"
+            app:layout_constraintStart_toEndOf="@+id/moves_label"
+            app:layout_constraintTop_toTopOf="@+id/moves_label"
+            app:text_int="@{viewModel.puzzle.moves}"
+            tools:text="nrOfMoves" />
+
+        <TextView
+            android:id="@+id/moves_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/puzzle_complete_text_margin"
+            android:labelFor="@id/moves_textView"
+            android:text="@string/number_of_moves"
+            app:layout_constraintStart_toStartOf="@+id/completion_time_label"
+            app:layout_constraintTop_toBottomOf="@+id/completion_time_label" />
+
+        <TextView
+            android:id="@+id/completion_date_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/puzzle_complete_between_margin"
+            app:layout_constraintStart_toEndOf="@+id/completion_date_label"
+            app:layout_constraintTop_toTopOf="@+id/completion_date_label"
+            app:text_date="@{viewModel.puzzle.completionDate}"
+            tools:text="completionDate" />
+
+        <TextView
+            android:id="@+id/completion_date_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/puzzle_complete_text_margin"
+            android:labelFor="@id/completion_date_textView"
+            android:text="@string/completion_date"
+            app:layout_constraintStart_toStartOf="@+id/completed_puzzle_imageView"
+            app:layout_constraintTop_toBottomOf="@+id/completed_puzzle_imageView" />
+
+        <TextView
+            android:id="@+id/completion_time_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/puzzle_complete_between_margin"
+            app:layout_constraintStart_toEndOf="@+id/completion_time_label"
+            app:layout_constraintTop_toTopOf="@+id/completion_time_label"
+            app:text_time="@{viewModel.puzzle.completionDate}"
+            tools:text="completionTime" />
+
+        <TextView
+            android:id="@+id/completion_time_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/puzzle_complete_text_margin"
+            android:labelFor="@id/completion_time_textView"
+            android:text="@string/completion_time"
+            app:layout_constraintStart_toStartOf="@+id/completion_date_label"
+            app:layout_constraintTop_toBottomOf="@+id/completion_date_label" />
+
+        <TextView
+            android:id="@+id/author_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/puzzle_complete_between_margin"
+            android:text="@{viewModel.puzzle.author}"
+            app:layout_constraintBottom_toBottomOf="@+id/author_label"
+            app:layout_constraintStart_toEndOf="@+id/author_label"
+            tools:text="authorName" />
+
+        <TextView
+            android:id="@+id/author_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/puzzle_complete_text_margin"
+            android:labelFor="@id/author_textView"
+            android:text="@string/by_author"
+            app:layout_constraintBottom_toTopOf="@+id/completed_puzzle_imageView"
+            app:layout_constraintStart_toStartOf="@+id/completed_puzzle_imageView" />
+
+        <Button
+            android:id="@+id/button_return"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:text="@string/return_to_start"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/completed_puzzle_imageView"
+            app:layout_constraintStart_toStartOf="@+id/completed_puzzle_imageView"
+            app:layout_constraintTop_toBottomOf="@+id/moves_label"
+            app:layout_constraintVertical_bias="0.522" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

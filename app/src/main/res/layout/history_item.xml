@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="puzzle"
+            type="com.example.puzzleapp.domain.Puzzle" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/history_item_margin"
+        app:cardBackgroundColor="@color/light_grey">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/picker_item_imageView"
+                style="@style/HistoryText"
+                android:layout_width="@dimen/history_item_size"
+                android:layout_height="@dimen/history_item_size"
+                android:contentDescription="@string/cd_puzzle_preview"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:puzzle="@{puzzle}"
+                tools:src="@tools:sample/avatars" />
+
+
+            <TextView
+                android:id="@+id/moves_textView"
+                style="@style/HistoryText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/history_between_margin"
+                app:layout_constraintStart_toEndOf="@+id/moves_label"
+                app:layout_constraintTop_toTopOf="@+id/moves_label"
+                app:text_int="@{puzzle.moves}"
+                tools:text="nrOfMoves" />
+
+            <TextView
+                android:id="@+id/moves_label"
+                style="@style/HistoryLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@id/moves_textView"
+                android:text="@string/number_of_moves"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/completion_time_label"
+                app:layout_constraintTop_toBottomOf="@+id/completion_time_label" />
+
+            <TextView
+                android:id="@+id/completion_date_textView"
+                style="@style/HistoryText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/history_between_margin"
+                app:layout_constraintStart_toEndOf="@+id/completion_date_label"
+                app:layout_constraintTop_toTopOf="@+id/completion_date_label"
+                app:text_date="@{puzzle.completionDate}"
+                tools:text="completionDate" />
+
+            <TextView
+                android:id="@+id/completion_date_label"
+                style="@style/HistoryLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@id/completion_date_textView"
+                android:text="@string/completion_date"
+                app:layout_constraintBottom_toTopOf="@+id/completion_time_label"
+                app:layout_constraintStart_toStartOf="@+id/author_label"
+                app:layout_constraintTop_toBottomOf="@+id/author_label" />
+
+            <TextView
+                android:id="@+id/completion_time_textView"
+                style="@style/HistoryText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/history_between_margin"
+                app:layout_constraintStart_toEndOf="@+id/completion_time_label"
+                app:layout_constraintTop_toTopOf="@+id/completion_time_label"
+                app:text_time="@{puzzle.completionDate}"
+                tools:text="completionTime" />
+
+            <TextView
+                android:id="@+id/completion_time_label"
+                style="@style/HistoryLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@id/completion_time_textView"
+                android:text="@string/completion_time"
+                app:layout_constraintBottom_toTopOf="@+id/moves_label"
+                app:layout_constraintStart_toStartOf="@+id/completion_date_label"
+                app:layout_constraintTop_toBottomOf="@+id/completion_date_label" />
+
+            <TextView
+                android:id="@+id/author_textView"
+                style="@style/HistoryText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/history_between_margin"
+                android:text="@{puzzle.author}"
+                app:layout_constraintStart_toEndOf="@+id/author_label"
+                app:layout_constraintTop_toTopOf="@+id/author_label"
+                tools:text="authorName" />
+
+            <TextView
+                android:id="@+id/author_label"
+                style="@style/HistoryLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/history_text_margin"
+                android:labelFor="@id/author_textView"
+                android:text="@string/by_author"
+                app:layout_constraintBottom_toTopOf="@+id/completion_date_label"
+                app:layout_constraintStart_toEndOf="@+id/picker_item_imageView"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.333" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
